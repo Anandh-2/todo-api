@@ -7,7 +7,12 @@ const cors=require('cors');
 const app=express();
 app.use(express.json());
 
-app.use(cors());
+const corsOptions={
+    origin: 'https://to-does.netlify.app/',
+    methods: ['GET','POST','PUT','DELETE'],
+};
+
+app.use(cors(corsOptions));
 
 const uri=`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.iitck.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
