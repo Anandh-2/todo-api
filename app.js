@@ -8,7 +8,7 @@ const app=express();
 app.use(express.json());
 
 const corsOptions={
-    origin: 'https://to-does.netlify.app/',
+    origin: 'https://to-does.netlify.app',
     methods: ['GET','POST','PUT','DELETE'],
 };
 
